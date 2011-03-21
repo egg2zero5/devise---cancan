@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
-
+  load_and_authorize_resource
+  
   # GET /products
   # GET /products.xml
   def index
@@ -36,7 +37,8 @@ class ProductsController < ApplicationController
   # GET /products/1/edit
   def edit
     @product = Product.find(params[:id])
-  end
+     
+ end
 
   # POST /products
   # POST /products.xml
